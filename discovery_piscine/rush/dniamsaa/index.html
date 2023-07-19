@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq8TgwxyUXOBGDwNJ2v7nd53LKtPkBkmtkkw&usqp=CAU" sizes="32x32" />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq8TgwxyUXOBGDwNJ2v7nd53LKtPkBkmtkkw&usqp=CAU" sizes="192x192" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dniamsaa</title>
+</head>
+<body>
+    <header class="sticky top-0 z-30 w-full px-2 py-4 bg-black sm:px-4 shadow-xl">
+      <div class="flex items-center justify-between mx-auto max-w-7xl">
+          <span id="dniamsaa" onclick="scrollToElement('home');" class="text-2xl font-extrabold text-[#FFD700] text-600 hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 ">DNIAMSAA</span>
+        <div class="flex items-center space-x-1">
+          <ul class="hidden space-x-2 md:inline-flex">
+            <li><a href="#home" class="hover:text-[#FFD700] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 px-4 py-2 font-semibold text-white text-600 rounded">Home</a></li>
+            <li><a href="#skill" class="hover:text-[#FFD700] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 px-4 py-2 font-semibold text-white text-600 rounded">Skills</a></li>
+            <li><a href="#contact" class="hover:text-[#FFD700] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 px-4 py-2 font-semibold text-white text-600 rounded">Contact Me</a></li>
+          </ul>
+          <div class="inline-flex md:hidden" x-data="{ open: false }">
+            <button class="flex-none px-2 " @click="open = true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+              </svg>
+              <span class="sr-only">Open Menu</span>
+            </button>
+            <div
+              class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow"
+              x-show.transition="open" @click.away="open = false" x-cloak>
+              <button class="self-end flex-none px-2 ml-2" @click="open = false">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span class="sr-only">Close Menu</span>
+              </button>
+              <ul class="space-y-2">
+                <li><a href="#home" class="px-4 py-2 font-semibold text-gray-600 rounded">Home</a></li>
+                <li><a href="#skill" class="px-4 py-2 font-semibold text-gray-600 rounded">Skills</a></li>
+                <li><a href="#contact" class="px-4 py-2 font-semibold text-gray-600 rounded">Contact Me</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  <main>
+    <div
+      class="bg-fixed bg-cover bg-center bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/In_the_photo_there_is_one_Perseid%2C_Milky_Way_and_Andromega_galaxy_and_light_pollution_on_the_horizon_-_Luhasoo_bog_in_Estonia.jpg/1200px-In_the_photo_there_is_one_Perseid%2C_Milky_Way_and_Andromega_galaxy_and_light_pollution_on_the_horizon_-_Luhasoo_bog_in_Estonia.jpg)] container p-5 mx-auto min-h-screen flex md:flex-column flex-col-reverse justify-center items-center"
+      id="home">
+      <div class=" text-center text-center md:mt-0 mt-8">
+        <h1 class="text-3xl lg:text-5xl font-bold text-white">Dechathon Niamsa-ard</h1><br>
+        <p class="text-lg lg:text-xl my-4 font-medium text-white "><span class="text-[#00BFFF] text-4xl font-bolder"><a target="_blank" href="https://matbot.kmitl.ac.th/">MATBOT</a></span>  student at  <span class="text-[#FF8C00] text-4xl">KMITL</span></p>
+        <div class="mt-12"></div>
+      </div>
+      <div class="max-w-[300px] lg:max-w-[350px] shadow-md  rounded-2xl overflow-hidden">
+        <img class="w-full" src="./asset/phone.jpg" alt="" id="64110094">
+      </div>
+    </div>
+    <div class="bg-[#e9ecef]">
+      <div class="min-h-screen container p-5 mx-auto" id="skill">
+        <div class="mt-[4.5rem]">
+          <h1 class="text-4xl font-bold mb-4 text-center">My Skills</h1>
+          <div class="relative pt-1">
+            <div class="flex mb-2 items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+                  C/C++
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-semibold inline-block text-purple-600">
+                  10%
+                </span>
+              </div>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
+              <div style="width:10%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"></div>
+            </div>
+          </div>
+          <div class="relative pt-1">
+            <div class="flex mb-2 items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                  Python
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-semibold inline-block text-blue-600">
+                  80%
+                </span>
+              </div>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+              <div style="width:80%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+            </div>
+          </div>
+          <div class="relative pt-1">
+            <div class="flex mb-2 items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200">
+                  HTML
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-semibold inline-block text-red-600">
+                  60%
+                </span>
+              </div>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
+              <div style="width:60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+            </div>
+          </div>
+          <div class="relative pt-1">
+            <div class="flex mb-2 items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                  CSS
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-semibold inline-block text-blue-600">
+                  40%
+                </span>
+              </div>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+              <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+            </div>
+          </div>
+          <div class="relative pt-1">
+            <div class="flex mb-2 items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">
+                  JavaScript
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-semibold inline-block text-yellow-600">
+                  50%
+                </span>
+              </div>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-yellow-200">
+              <div style="width:50%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-500"></div>
+            </div>
+          </div>
+        </div>
+        <div class="my-8">
+          <h1 class="text-4xl font-bold mb-8 text-center ">My Projects</h1>
+          <div class="max-w-sm w-full lg:max-w-full lg:flex justify-center w-screen">
+            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://www.biztalknews.com/wp-content/uploads/2022/07/20220713_Robocup.jpg')" title="Woman holding a mug">
+            </div>
+            <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+              <div class="mb-8">
+                <div class="text-gray-900 font-bold text-xl mb-2">Staff at RoboCup 2022</div>
+                <p class="text-gray-700 text-base">Be the staff for the middle size robot soccer league for RoboCup 2022 in Bangkok</p>
+              </div>
+              <div class="flex items-center">
+                <img class="w-10 h-10 rounded-full mr-4" src="https://www.biztalknews.com/wp-content/uploads/2022/07/20220713_Robocup.jpg" alt="Avatar of Jonathan Reinink">
+                <div class="text-sm">
+                  <p class="text-gray-900 leading-none">Dechathon Niamsa-ard</p>
+                  <p class="text-gray-600">Jul 13</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-screen flex flex-col justify-center items-center  dark:bg-gray-900" id="contact">
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Me</h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Please feel free to reach out to me for any work-related inquiries through the form provided below. I am available and ready to assist you.</p>
+            <form action="#" class="space-y-8">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Email here" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Subject here" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                </div>
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+            </form>
+        </div>
+      </section>
+      <div>
+        <a target="_blank" class="m-4" href="https://www.instagram.com/phonefourthdecember__/">
+          <i class="text-white hover:text-[#dee2e6] hover:scale-110 fa-brands fa-instagram text-4xl"></i>
+        </a>
+        <a target="_blank" class="m-4" href="https://https://www.facebook.com/dechathon.niamsaard.3">
+          <i class="text-white hover:text-[#dee2e6] hover:scale-110 fa-brands fa-facebook-square text-4xl"></i>
+        </a>
+      </div>
+  </main>
+  <footer class="bg-black text-white text-center text-lg font-medium p-3">
+    <p id="copyright"></p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
