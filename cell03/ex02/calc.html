@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin:5%;
+            background-color: antiquewhite;
+        }
+        .calculator {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: salmon;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Sofia", sans-serif;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 80px;
+            height: 30px;
+            margin: 10px;
+            padding: 1px;
+            font-size: 16px;
+            font-family: cursive;
+            border: 4px black solid;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            font-family: cursive;
+            border: 5px black solid;
+            border-radius: 40px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="calculator">
+        <input type="text" id="LOP">
+        <select id="OP">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="ROP">
+        <input type="submit" value="Try me!" onclick="calculate()">
+    </div>
+    <script>
+        function calculate() {
+            let leftValue = parseInt(document.getElementById("LOP").value);
+            let OP = document.getElementById("OP").value;
+            let rightValue = parseInt(document.getElementById("ROP").value);
+            let result;
+
+            if (isNaN(leftValue) || leftValue < 0 || rightValue < 0 || isNaN(rightValue)) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            switch(OP) {
+                case "+":
+                    result = leftValue + rightValue;
+                    break;
+                case "-":
+                    result = leftValue - rightValue;
+                    break;
+                case "*":
+                    result = leftValue * rightValue;
+                    break;
+                case "/":
+                    if (rightValue === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftValue / rightValue;
+                    break;
+                case "%":
+                    if (rightValue === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftValue % rightValue;
+                    break;
+            }
+
+            alert(result);
+            console.log(result);
+        }
+
+        setInterval(function() {alert("Please, use me...");}, 30000);
+    </script>
+</body>
+</html>

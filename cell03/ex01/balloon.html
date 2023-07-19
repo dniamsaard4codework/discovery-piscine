@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+    </head>
+<body>
+    <div id="balloon" onclick="growBalloon()" onmouseout="shrinkBalloon()"></div>
+    <script>
+        let size = 200;
+        let colorIndex = 0;
+        const colors = ["red", "green", "blue"];
+        let balloon = document.getElementById("balloon");
+
+        function growBalloon() {
+            size += 10;
+            if (size > 420) {
+                size = 200;
+            }
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+            colorIndex = (colorIndex + 1) % 3;
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+
+        function shrinkBalloon() {
+            size -= 5;
+            if (size < 200) {
+                size = 200;
+            }
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+            colorIndex = (colorIndex - 1 + 3) % 3;
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+    </script>
+</body>
+</html>
