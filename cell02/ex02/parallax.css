@@ -1,0 +1,48 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+h6 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 300px 80px;
+  margin: 0;
+}
+
+.bg01, .bg02 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg01 {
+    background-image: url(https://d.newsweek.com/en/full/1614084/newsweek-amplify-magic-johnson-nba-store.png);
+    min-height: 100%;
+}
+
+.bg02 {
+    background-image: url(http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1123,w_2000,x_0,y_329/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/b/9/b9ee9ffab2e220c756427b601a4690c5d294c963/larry-bird-career-retrospective.jpg);
+    min-height: 100%;
+}
+
+.cap1, .cap2, span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  color: black;
+  padding: 18px;
+  font-size: 10px;
+  letter-spacing: 10px;
+  text-align: center;
+}
